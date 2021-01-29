@@ -1,0 +1,108 @@
+.Colors {
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    height: 45%;
+    background-color: #fcfcfc;
+}
+
+.Colors .sum {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Colors .sum div {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.Colors .plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3.5rem;
+    color: rgb(110, 94, 96);
+}
+
+hr {
+    width: 75%;
+    margin-top: 30px;
+    border: 0;
+    height: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.Colors .results {
+    display: grid;
+    row-gap: 60px;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 33px;
+    border-radius: 10px;
+    background-color: rgba(250, 250, 250, 0.299);
+}
+
+.Colors .results div {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.Colors .color.Amarelo {
+    background-color: #fffa6e;
+}
+
+.Colors .color.Laranja {
+    background-color: #ffb773;
+}
+
+.Colors .color.Vermelho {
+    background-color: #ff694f;
+}
+
+.Colors .color.Roxo {
+    background-color: #b617ff;
+}
+
+.Colors .color.Marrom-Terra {
+    background-color: #993c0c;
+}
+
+.Colors .color.Verde {
+    background-color: #80f284;
+}
+
+.Colors .color.Marrom {
+    background-color: #6e2f0f;
+}
+
+.Colors .color.Branco {
+    background-color: #ffffff;
+}
+
+.Colors .color.Preto {
+    background-color: #000000;
+}
+
+.Colors .color.Rosa {
+    background-color: #ff6ead;
+}
+
+.Colors .color.Azul {
+    background-color: #708dff;
+}
+
+.Colors .color.Cinza {
+    background-color: #858585;
+}
+
+.Colors .color.Lilás {
+    background-color: #d469ff;
+}
