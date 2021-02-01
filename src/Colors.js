@@ -1,6 +1,7 @@
+import { useEffect } from "react";
 import "./Colors.css";
 
-const Colors = ({ colorList }) => {
+const Colors = ({ colorList, color, setColor, setIsGameOver }) => {
     const pickColor = () => {
         const id = Math.floor(Math.random() * 10) + 1;
         const color = colorList.find((color) => parseInt(color.id) === id);
@@ -32,13 +33,16 @@ const Colors = ({ colorList }) => {
 
     const verifyAnswer = (color, array) => {
         if (color.result.name === array) {
-            console.log("vc ganhou");
+            setIsGameOver(true);
         } else {
             console.log("vc perdeu");
         }
     };
 
-    const color = pickColor();
+    useEffect(() => {
+        setColor(pickColor());
+        console.log("color picking");
+    }, []);
     const colorArray = makeColorArray(color);
     const randomArray = randomizeArray(colorArray);
 

@@ -1,7 +1,18 @@
 .Message {
-    width: 200px;
-    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px;
+    height: 150px;
+
     color: rgb(24, 22, 24);
     text-align: center;
     background-size: cover;
+}
+
+.Message p {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
