@@ -3,6 +3,7 @@ import { colorList } from "./data.js";
 import Message from "./Message.js";
 import MainImage from "./MainImage.js";
 import Colors from "./Colors.js";
+import Confetti from "./Confetti.js";
 import "./App.css";
 
 function App() {
@@ -49,7 +50,6 @@ function App() {
                 setColorArray(() => makeColorArray(color));
                 setRandomColors(() => randomizeArray(colorArray));
                 setIsGameOver(false);
-                console.log("U jogo acabou");
             }, 4000);
         }
     }, [isGameOver]);
@@ -63,6 +63,7 @@ function App() {
                 colorsArray={randomColors}
                 setIsGameOver={setIsGameOver}
             />
+            {isGameOver ? <Confetti /> : <></>}
         </div>
     );
 }

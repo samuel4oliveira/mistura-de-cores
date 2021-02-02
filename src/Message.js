@@ -14,7 +14,6 @@ const Message = ({ color, isGameOver }) => {
                     `A mistura das cores ${color.color1.name.toLowerCase()} e ${color.color2.name.toLowerCase()} resultam em qual cor?`
                 );
                 setIsFirstRun(false);
-                console.log("A mistura das");
             }, 3000);
         } else {
             setMessage(
@@ -29,7 +28,6 @@ const Message = ({ color, isGameOver }) => {
                 `Isso mesmo, a mistura das cores ${color.color1.name.toLowerCase()} e ${color.color2.name.toLowerCase()} resulta em ${color.result.name.toLowerCase()}.`
             );
         }
-        console.log("gameover");
     }, [isGameOver]);
 
     return (

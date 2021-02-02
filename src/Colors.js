@@ -5,7 +5,7 @@ const Colors = ({ color, colorsArray, setIsGameOver }) => {
         if (color.result.name === answer) {
             setIsGameOver(true);
         } else {
-            console.log("vc perdeu");
+            console.log(`Não é ${answer}`);
         }
     };
 
