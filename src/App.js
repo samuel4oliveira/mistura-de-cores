@@ -36,6 +36,24 @@ function App() {
         return randomArray;
     };
 
+    function reset() {
+        return new Promise(function (resolve, reject) {
+            setTimeout(resolve, 4000);
+        })
+            .then(() => {
+                setColor(() => pickColor());
+            })
+            .then(() => {
+                setColorArray(() => makeColorArray(color));
+            })
+            .then(() => {
+                setRandomColors(() => randomizeArray(colorArray));
+            })
+            .then(() => {
+                setIsGameOver(false);
+            });
+    }
+
     const [color, setColor] = useState(() => pickColor());
     const [colorArray, setColorArray] = useState(() => makeColorArray(color));
     const [randomColors, setRandomColors] = useState(() =>
@@ -45,12 +63,7 @@ function App() {
 
     useEffect(() => {
         if (isGameOver) {
-            setTimeout(() => {
-                setColor(() => pickColor());
-                setColorArray(() => makeColorArray(color));
-                setRandomColors(() => randomizeArray(colorArray));
-                setIsGameOver(false);
-            }, 4000);
+            reset();
         }
     }, [isGameOver]);
 
