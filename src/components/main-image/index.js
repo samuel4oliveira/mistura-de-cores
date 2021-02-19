@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "./MainImage.css";
+import { useEffect, useState } from "react";
+import "./main-image.css";
 
 const MainImage = () => {
     const [image, setImage] = useState("./assets/imgs/girl.svg");

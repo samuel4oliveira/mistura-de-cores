@@ -1,16 +1,16 @@
-import "./Colors.css";
+import "./colors.css";
 
-const Colors = ({ color, colorsArray, setIsGameOver }) => {
+const Colors = ({ color, colorsArray, setIsGameOver, setMessage }) => {
     const verifyAnswer = (color, answer) => {
         if (color.result.name === answer) {
             setIsGameOver(true);
         } else {
-            console.log(`Não é ${answer}`);
+            setMessage(`Não é ${answer.toLowerCase()}.`);
         }
     };
 
     return (
-        <div className="Colors">
+        <>
             <div className="sum">
                 <div className={"color " + color.color1.name}></div>
                 <div className="plus">+</div>
@@ -26,7 +26,7 @@ const Colors = ({ color, colorsArray, setIsGameOver }) => {
                 <div onClick={() => {verifyAnswer(color ,colorsArray[4])}} className={"color " + colorsArray[4]}></div>
                 <div onClick={() => {verifyAnswer(color ,colorsArray[5])}} className={"color " + colorsArray[5]}></div>
             </div>
-        </div>
+        </>
     );
 };
 

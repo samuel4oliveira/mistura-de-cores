@@ -1,8 +1,9 @@
 .Colors {
     border-radius: 10px;
     width: 90%;
-    max-width: 400px;
     height: 45%;
+    max-width: 337px;
+    max-height: 365px;
     background-color: #fcfcfc;
 }
 

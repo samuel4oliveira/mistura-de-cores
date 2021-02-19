@@ -7,7 +7,7 @@ export const colorList = [
     },
     {
         id: 2,
-        color1: { name: "Vermelho", code: "#ffb773" },
+        color1: { name: "Vermelho", code: "#ff694f" },
         color2: { name: "Amarelo", code: "#fffa6e" },
         result: { name: "Laranja", code: "#ffb773" },
     },
@@ -19,20 +19,20 @@ export const colorList = [
     },
     {
         id: 4,
-        color1: { name: "Vermelho", code: "#ffb773" },
+        color1: { name: "Vermelho", code: "#ff694f" },
         color2: { name: "Verde", code: "#80f284" },
         result: { name: "Marrom", code: "#6e2f0f" },
     },
     {
         id: 5,
-        color1: { name: "Vermelho", code: "#ffb773" },
+        color1: { name: "Vermelho", code: "#ff694f" },
         color2: { name: "Branco", code: "#ffffff" },
         result: { name: "Rosa", code: "#ff6ead" },
     },
     {
         id: 6,
         color1: { name: "Azul", code: "#708dff" },
-        color2: { name: "Vermelho", code: "#ffb773" },
+        color2: { name: "Vermelho", code: "#ff694f" },
         result: { name: "Roxo", code: "#b617ff" },
     },
     {
@@ -58,5 +58,11 @@ export const colorList = [
         color1: { name: "Roxo", code: "#b617ff" },
         color2: { name: "Branco", code: "#ffffff" },
         result: { name: "Lilás", code: "#d469ff" },
+    },
+    {
+        id: 11,
+        color1: { name: "Azul", code: "#708dff" },
+        color2: { name: "Verde", code: "#80f284" },
+        result: { name: "Azul Esverdeado", code: "#4bf2d3" },
     },
 ];
