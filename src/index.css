@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: #ffb6c1;
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -7,7 +8,12 @@ body {
 
 html,
 body,
-#root,
-.App {
+#root {
     height: 100%;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

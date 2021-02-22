@@ -1,9 +1,7 @@
 .Colors {
     border-radius: 10px;
-    width: 90%;
-    height: 45%;
-    max-width: 337px;
-    max-height: 365px;
+    width: 337px;
+    height: 365px;
     background-color: #fcfcfc;
 }
 
@@ -54,6 +52,25 @@ hr {
     width: 40px;
     height: 40px;
     border-radius: 10px;
+}
+
+@media (max-height: 800px) {
+    .Colors {
+        width: 277px;
+        height: 300px;
+    }
+
+    .Colors .sum div {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .Colors .results {
+        display: grid;
+        row-gap: 30px;
+    }
 }
 
 .Colors .color.Amarelo {

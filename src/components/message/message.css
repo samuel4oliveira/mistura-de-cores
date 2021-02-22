@@ -18,3 +18,20 @@
     margin-bottom: 20px;
     padding: 0 15px;
 }
+
+@media (max-height: 800px) {
+    .Message {
+        width: 300px;
+        height: 100px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .Message p {
+        font-size: 15px;
+        font-weight: 400;
+        padding: 0 50px;
+        margin-bottom: 12px;
+    }
+}
