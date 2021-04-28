@@ -1,10 +1,18 @@
 import "./colors.css";
 
-const Colors = ({ color, colorsArray, setIsGameOver, setMessage }) => {
+const Colors = ({
+    color,
+    colorsArray,
+    setIsGameOver,
+    setMessage,
+    isGameOver,
+}) => {
+    const celebrationSound = new Audio("/assets/audios/celebration.m4a");
     const verifyAnswer = (color, answer) => {
         if (color.result.name === answer) {
             setIsGameOver(true);
-        } else {
+            celebrationSound.play();
+        } else if (!isGameOver) {
             setMessage(`Não é ${answer.toLowerCase()}.`);
         }
     };

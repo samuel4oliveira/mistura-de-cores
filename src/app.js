@@ -1,7 +1,7 @@
 import MainButton from "./components/main-button";
 import MainImage from "./components/main-image";
 import Confetti from "./components/confetti";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Message from "./components/message";
 import Colors from "./components/colors";
 import { colorList } from "./data.js";
@@ -14,9 +14,9 @@ function App() {
         return color;
     };
 
-    const makeColorArray = (firstColor) => {
+    const makeColorArray = useCallback((color) => {
         let colorArray = [];
-        colorArray.push(firstColor.result.name);
+        colorArray.push(color.result.name);
         while (colorArray.length < 6) {
             let color = pickColor().result.name;
             if (!colorArray.includes(color)) {
@@ -24,7 +24,7 @@ function App() {
             }
         }
         return colorArray;
-    };
+    }, []);
 
     const randomizeArray = (array) => {
         let randomArray = [];
@@ -39,21 +39,25 @@ function App() {
 
     const [color, setColor] = useState(() => pickColor());
     const [colorArray, setColorArray] = useState(() => makeColorArray(color));
-    const [randomColors, setRandomColors] = useState(() => randomizeArray(colorArray));
+    const [randomColors, setRandomColors] = useState(() =>
+        randomizeArray(colorArray)
+    );
     const [isGameOver, setIsGameOver] = useState(false);
     const [newGame, setNewGame] = useState(false);
-    const [message, setMessage] = useState("Oi, você consegue acertar o resultado da mistura das cores?");
+    const [message, setMessage] = useState(
+        "Oi, você consegue acertar o resultado da mistura das cores?"
+    );
 
     useEffect(() => {
-        if (newGame) {
+        if (newGame && !isGameOver) {
             setColor(() => pickColor());
             setNewGame(false);
         }
-    }, [isGameOver]);
+    }, [isGameOver, newGame]);
 
     useEffect(() => {
         setColorArray(() => makeColorArray(color));
-    }, [color]);
+    }, [color, makeColorArray]);
 
     useEffect(() => {
         setRandomColors(() => randomizeArray(colorArray));
@@ -61,11 +65,17 @@ function App() {
 
     return (
         <div className="App">
-            <Message color={color} isGameOver={isGameOver} message={message} setMessage={setMessage} />
+            <Message
+                color={color}
+                isGameOver={isGameOver}
+                message={message}
+                setMessage={setMessage}
+            />
             <MainImage />
             <div className="Colors">
                 <Colors
                     color={color}
+                    isGameOver={isGameOver}
                     colorsArray={randomColors}
                     setIsGameOver={setIsGameOver}
                     setMessage={setMessage}

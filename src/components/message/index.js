@@ -8,10 +8,13 @@ const Message = ({ color, isGameOver, message, setMessage }) => {
                 `Isso mesmo, a mistura das cores ${color.color1.name.toLowerCase()} e ${color.color2.name.toLowerCase()} resulta em ${color.result.name.toLowerCase()}.`
             );
         }
-    }, [isGameOver]);
+    }, [isGameOver, color, setMessage]);
 
     return (
-        <div style={{ backgroundImage: "url(/assets/imgs/speech-bubble.svg)" }} className="Message">
+        <div
+            style={{ backgroundImage: "url(/assets/imgs/speech-bubble.svg)" }}
+            className="Message"
+        >
             <p>{message}</p>
         </div>
     );

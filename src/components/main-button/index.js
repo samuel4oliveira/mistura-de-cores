@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import "./main-button.css";
 
-const MainButton = ({ color, setMessage, isGameOver, setNewGame, setIsGameOver }) => {
+const MainButton = ({
+    color,
+    setMessage,
+    isGameOver,
+    setNewGame,
+    setIsGameOver,
+}) => {
     const [isFirstRun, setIsFirstRun] = useState(true);
     const buttonClicked = () => {
         if (isGameOver) {
@@ -21,7 +27,7 @@ const MainButton = ({ color, setMessage, isGameOver, setNewGame, setIsGameOver }
                 `A mistura das cores ${color.color1.name.toLowerCase()} e ${color.color2.name.toLowerCase()} resultam em qual cor?`
             );
         }
-    }, [color]);
+    }, [color, isFirstRun, setMessage]);
 
     return (
         <div className="MainButton">
