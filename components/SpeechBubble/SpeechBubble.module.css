@@ -1,0 +1,19 @@
+.speechbubble {
+  position: relative;
+  margin: 0 auto;
+  height: 10rem;
+  width: 65%;
+}
+
+.speechbubble div {
+  background-image: url(/assets/imgs/speech-bubble.svg);
+  background-repeat: no-repeat;
+  color: rgb(40, 40, 40);
+  text-align: justify;
+  background-size: cover;
+  position: relative;
+  font-size: 1.25rem;
+  padding: 1rem;
+  height: 10rem;
+  width: 100%;
+}

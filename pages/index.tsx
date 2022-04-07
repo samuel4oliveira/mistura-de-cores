@@ -1,4 +1,6 @@
+import SpeechBuble from "../components/SpeechBubble";
 import Character from "../components/Character";
+import style from "/styles/Home.module.css";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -12,7 +14,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/assets/imgs/girl.svg" />
       </Head>
 
-      <main>
+      <main className={style.container}>
+        <SpeechBuble />
+
         <Character />
       </main>
     </div>

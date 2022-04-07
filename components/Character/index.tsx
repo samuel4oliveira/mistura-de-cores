@@ -10,10 +10,8 @@ const Character = () => {
 
   const onBlink = async () => {
     setImageSrc(eyesClosedSrc);
-    console.log("aaa");
     await new Promise((resolve) => setTimeout(resolve, 200));
     setImageSrc(eyesOpenSrc);
-    console.log("bbb");
   };
 
   useEffect(() => {
